@@ -1,0 +1,45 @@
+CREATE DATABASE apphorario;
+
+CREATE TABLE `apphorario`.`evento` (
+ `id` INT NOT NULL AUTO_INCREMENT ,
+ `title` VARCHAR (50) NOT NULL ,
+ `descr` VARCHAR (250) NOT NULL ,
+ `startTime` VARCHAR (50) NOT NULL ,
+ `endTime` VARCHAR (50) NOT NULL ,
+ `allDay` BOOLEAN NOT NULL DEFAULT FALSE,
+ PRIMARY KEY (`id`)
+ );
+ 
+CREATE TABLE `apphorario`.`tarea` (
+ `id` INT NOT NULL AUTO_INCREMENT ,
+ `nombre` VARCHAR (50) NOT NULL ,
+ `cargo` VARCHAR (50) NOT NULL ,
+ `descripcion` VARCHAR (250) NOT NULL ,
+ PRIMARY KEY (`id`)
+ );
+
+ create table materia(
+	id int auto_increment primary key,
+    nombre varchar(50) not null,
+    startDate varchar(20) not null,
+    endtDate varchar(20) not null
+);
+
+
+INSERT INTO `materia` (`id`, `nombre`, `startDate`, `endtDate`) VALUES
+(1, 'INTELIGENCIA ARTIFICIAL', '17/02/2020', '27/06/2020'),
+(2, 'INGLES', '17/02/2020', '27/06/2020'),
+(3, 'GERENCIA', '17/02/2020', '2/05/2020'),
+(4, 'CONCEPTOS GENERALES DE SEGURIDAD', '17/02/2020', '2/05/2020'),
+(5, 'AUDITOR?A DE SOFTWARE', '17/02/2020', '27/06/2020'),
+(6, 'SISTEMAS DISTRIBUIDOS', '4/05/2020', '27/06/2020'),
+(7, 'GESTI?N DE PROYECTOS', '4/05/2020', '27/06/2020'),
+(8, 'APLICACIONES DE ESCRITORIO', '4/05/2020', '27/06/2020'),
+(9, 'APLICACIONES CLOUD COMPUTING - WEB', '4/05/2020', '27/06/2020'),
+(10, 'SEMINARIO DE INVESTIGACION', '29/06/2020', '22/08/2020'),
+(11, 'HUM. ETICA Y RESPONSABILIDAD SOCIAL Y AMBIENTAL', '29/06/2020', '22/08/2020'),
+(12, 'APLICACIONES MOVILES', '29/06/2020', '22/08/2020'),
+(13, 'FORMACION INTEGRAL BIENESTAR', '9/05/2020', '13/06/2020');
+
+alter table tarea add column id_user varchar(50);
+alter table evento add column id_user varchar(50);
